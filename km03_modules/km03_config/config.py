@@ -23,7 +23,7 @@ class ConfigBasic():
         self.MAIL_USE_TLS = True
         self.MAIL_USERNAME = env_dict.get('EMAIL')
         self.MAIL_PASSWORD = env_dict.get('EMAIL_PASSWORD')
-        self.EMAIL_DASH_AND_DATA = os.environ.get('EMAIL_DASH_AND_DATA')
+
 
         #web Guest
         self.GUEST_EMAIL = env_dict.get('GUEST_EMAIL')
@@ -38,12 +38,11 @@ class ConfigBasic():
 
         self.TR_VERIFICATION_PASSWORD = os.environ.get("TR_VERIFICATION_PASSWORD")
 
-
-        self.UPLOADED_FILES_FOLDER = os.path.join(os.environ.get('DB_ROOT'), 'files')
-        self.UTILITY_FILES_FOLDER = os.path.join(os.environ.get('DB_ROOT'), 'files_utility')
-        self.QUERIES_FOLDER = os.path.join(os.environ.get('DB_ROOT'), 'queries')
-        self.FILES_DATABASE = os.path.join(os.environ.get('DB_ROOT'), 'files_database')
-        self.UPLOADED_TEMP_DATA = os.path.join(os.environ.get('DB_ROOT'), 'files_temp')
+        self.DIR_DB_FILES = os.path.join(os.environ.get('DB_ROOT'), 'files')#UPLOADED_FILES_FOLDER
+        self.DIR_DB_FILES_UTILITY = os.path.join(os.environ.get('DB_ROOT'), 'files_utility')#UTILITY_FILES_FOLDER
+        self.DIR_DB_QUERIES = os.path.join(os.environ.get('DB_ROOT'), 'queries')#QUERIES_FOLDER
+        self.DIR_DB_FILES_DATABASE = os.path.join(os.environ.get('DB_ROOT'), 'files_database')#FILES_DATABASE
+        self.DIR_DB_FILES_TEMPORARY = os.path.join(os.environ.get('DB_ROOT'), 'files_temp')#UPLOADED_TEMP_DATA
 
 
 class ConfigLocal(ConfigBasic):

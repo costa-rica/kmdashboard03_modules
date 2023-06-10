@@ -11,15 +11,15 @@ import os
 if not os.path.exists(os.environ.get('DB_ROOT')):
     os.makedirs(os.environ.get('DB_ROOT'))
 
-# config.UPLOADED_TEMP_DATA directory:
+# config.DIR_DB_FILES_TEMPORARY directory:
 if not os.path.exists(os.path.join(os.environ.get('DB_ROOT'),"files_temp")):
     os.makedirs(os.path.join(os.environ.get('DB_ROOT'),"files_temp"))
 
-# config.UTILITY_FILES_FOLDER directory:
+# config.DIR_DB_FILES_UTILITY directory:
 if not os.path.exists(os.path.join(os.environ.get('DB_ROOT'),"files_utility")):
     os.makedirs(os.path.join(os.environ.get('DB_ROOT'),"files_utility"))
 
-# config.QUERIES_FOLDER directory:
+# config.DIR_DB_QUERIES directory:
 if not os.path.exists(os.path.join(os.environ.get('DB_ROOT'),"queries")):
     os.makedirs(os.path.join(os.environ.get('DB_ROOT'),"queries"))
 # #######################################################################################
