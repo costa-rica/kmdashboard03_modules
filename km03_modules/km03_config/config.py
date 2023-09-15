@@ -23,6 +23,8 @@ class ConfigBasic():
         self.MAIL_USE_TLS = True
         self.MAIL_USERNAME = env_dict.get('EMAIL')
         self.MAIL_PASSWORD = env_dict.get('EMAIL_PASSWORD')
+        self.GUEST_EMAIL = env_dict.get('GUEST_EMAIL')
+        self.GUEST_EMAIL_PASSWORD = env_dict.get('GUEST_EMAIL_PASSWORD')
 
 
         #web Guest
