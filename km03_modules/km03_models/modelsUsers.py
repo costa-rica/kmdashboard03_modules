@@ -1,5 +1,7 @@
-from .modelsBase import Base, sess
-from sqlalchemy.orm import sessionmaker, Session, relationship
+# from .modelsBase import Base, sess
+from .base import Base, DatabaseSession
+# from sqlalchemy.orm import sessionmaker, Session, relationship
+from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Integer, String, Text, Float, DateTime, ForeignKey, \
     Date, Boolean, Table
 # from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
@@ -28,6 +30,7 @@ class Users(Base, UserMixin):
     timeStamp = Column(DateTime, default=datetime.now)
     permission = Column(Text)
     theme = Column(Text)
+    timezone = Column(Text)
     # posts = relationship('Post', backref='author', lazy=True)
     track_inv = relationship('Tracking_inv', backref='updator_inv', lazy=True)
     track_re = relationship('Tracking_re', backref='updator_re', lazy=True)
